@@ -8,7 +8,7 @@ const Form = props => {
 
   const Submithandler = (e) => {
     e.preventDefault()
-    const emailhasError = emailref.current.value !== 'email@example.com'
+    const emailhasError = emailref.current.value !== 'user@example.com'
     const passcodehaserror = passcoderef.current.value !== '1Password'
     const FormHasError = emailhasError || passcodehaserror
 
