@@ -5,7 +5,7 @@ const Search = (props) => {
   const userInput = useRef()
   function HandleSearch(event) {
     event.preventDefault()
-    const FilteredList = Data.filter(item => userInput.current.value === item.tag)
+    const FilteredList = Data.filter(item => userInput.current.value.toLocaleLowerCase() === item.tag.toLocaleLowerCase())
     if (FilteredList.length === 0 || userInput.current.value.trim().length === 0) {
       props.changelist(Data)
     }else {
