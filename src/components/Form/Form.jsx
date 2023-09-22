@@ -14,8 +14,7 @@ const Form = props => {
 
     if (FormHasError) {
       seterror({ message: 'Invalid Email or Passcode.' })
-      alert(error.message)
-      return
+      return;
     }
 
     seterror(null)
@@ -25,7 +24,7 @@ const Form = props => {
   }
 
   return (
-    <form onSubmit={Submithandler} className=''>
+    <form onSubmit={Submithandler} className='w-full'>
       <div className='bg-white md:w-[50%] rounded-xl mx-auto w-[75%] my-14 p-12 text-black space-y-5 eounded-xl'>
         <h1 className='text-center font-bold text-2xl'>Login.</h1>
         <div className='flex justify-center'>
